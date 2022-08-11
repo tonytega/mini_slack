@@ -1,0 +1,27 @@
+
+.button-paragraph{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 5px;
+}
+
+button{
+    background-color: #6767ce;
+    color: #ffffff;
+    border: 0px solid #ffffff;
+    font-size: 16px;
+    width: 100%;
+    text-align: left;
+}
+
+button:hover{
+    background-color: #f8b809;
+    border-radius: 5px 0 0 5px;
+    color: #000000;
+}
+button:focus{
+    background-color: #f8b809;
+    border-radius: 5px 0 0 5px;
+    color: #000000;
+}
+

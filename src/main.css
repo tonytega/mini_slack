@@ -1,0 +1,21 @@
+.container{
+    
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: grid;
+    grid-template-areas: 'channels_and_people' 'messages';
+    grid-template-columns: 30% 70%;
+}
+
+.channels_and_people{
+    background-color: #6767ce;
+    color: #ffffff;
+}
+
+.channels_information,.people_information{
+    margin-left: 20px;
+    margin-bottom: 80px;
+}
+.messages{
+    height:100%;
+}
