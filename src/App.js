@@ -18,6 +18,7 @@ function App(){
     // const [number,setNumber] = useState(0);
     const [channel,setChannel] = useState(channels[0]);
     const [person, setPerson] = useState(people[0]);
+    const [showMenu,setShowMenu] = useState(false)
     // this fuction decides if the information shown belongs to a channel
     const channelRenderNo = (channel)=>{
             if (channels.indexOf(channel) >= 0){
@@ -33,7 +34,11 @@ function App(){
                 setPerson(person); 
             }
         }
-    
+    const onMenuClick = ()=>{
+        
+        showMenu === false ? setShowMenu(true):setShowMenu(false)
+        
+    }
     // this function is triggered when the user presses the enter button 
     // in an input field it also create a message object in channels or people static data
     // the channel argument can also be a person argument
@@ -66,10 +71,10 @@ function App(){
     //  this.state.render_no,   0 === channelmessage else render people message 
 
     return (
-        <Main channels={channels} people={people} channelRenderNo={channelRenderNo} personRenderNo={personRenderNo}>
+        <Main channels={channels} people={people} channelRenderNo={channelRenderNo} personRenderNo={personRenderNo} showMenu={showMenu}>
                     {channelOrPeople ? <ChannelMessage channel={channel} inputValue={inputValue} 
-                                onHandleKeyPress={onHandleKeyPress}/> : <PeopleMessage person={person} 
-                                inputValue={inputValue} onHandleKeyPress={onHandleKeyPress}/>}
+                                onHandleKeyPress={onHandleKeyPress} onMenuClick={onMenuClick} showMenu={showMenu}/> : <PeopleMessage person={person} 
+                                inputValue={inputValue} onHandleKeyPress={onHandleKeyPress}  /> }
                 </Main>
     )
 

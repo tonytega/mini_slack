@@ -8,8 +8,10 @@
 }
 
 .channels_and_people{
+    height: 100vh;
     background-color: #6767ce;
     color: #ffffff;
+    overflow-wrap: break-word;
 }
 
 .channels_information,.people_information{
@@ -19,3 +21,4 @@
 .messages{
     height:100%;
 }
+

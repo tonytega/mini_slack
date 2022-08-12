@@ -2,12 +2,14 @@
 .Channel-message{
     width: 70%;
     left: 30%;
+    
 }
 
 .all-message{
+    top: 30px;
     position: fixed;
     height : 89%;
-    width: 70%;
+    width: 100%;
     overflow-y : auto;
     border-bottom: 1px solid #808080 ;
     
@@ -21,11 +23,34 @@
     border: 1px solid #808080;
     border-radius: 5px;
     height: 30px;
-    top: 92%;
-    
-
-    
+    top: 92%;  
 }
 .channel-message-input:hover{
     border: 3px solid #6767ce;
 }
+.menu_bar{
+    position: fixed;
+    background-color: #6767ce;
+    display: none;
+    border: 1px solid black;
+    width: fit-content;
+    
+    padding: 0 5px 0 5px;
+    right: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@media (max-width:500px) {
+    .menu_bar{
+        display:block;
+    }
+    .channel-message-input{
+        left: 0;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    
+}
+

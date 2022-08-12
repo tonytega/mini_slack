@@ -4,9 +4,12 @@ import './main.css'
 
 // the main component renders a list of channels and people
 // it also renders channelmessage and people message as children
-const Main = ({channels,people,children,channelRenderNo,personRenderNo})=>(
+
+const Main = ({channels,people,children,channelRenderNo,personRenderNo,showMenu})=>{
+    
+    return(
     <div className="container">
-        <aside className="channels_and_people">
+        <aside className="channels_and_people" style={showMenu === false ?{'display': 'block'}:{'display':'none'}}>
             <div className="channels_information">
                 <h2>Channels</h2>
                 {channels.map((channel)=>(
@@ -26,4 +29,5 @@ const Main = ({channels,people,children,channelRenderNo,personRenderNo})=>(
 
     </div>
 )
+                }
 export default Main;

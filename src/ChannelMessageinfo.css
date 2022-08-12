@@ -8,9 +8,7 @@
                            min-content;
     grid-column-gap: 10px;
     margin-bottom: 10px;
-    margin-left: 20px;
-    
-    
+    margin-left: 20px; 
 }
 
 .message-image{
@@ -39,4 +37,20 @@
     font-size: 14px;
     margin-bottom: 0px;
     margin-top: 0px;
+}
+
+@media (max-width:700px) {
+    .channel-message-info{
+    
+        display: grid;
+        grid-template-areas: 'message-image message-sender message-sender'
+                              'message-image message-message message-message';
+        grid-template-columns: 15% 25% 60%;
+        grid-template-rows:    min-content 
+                               min-content;
+        grid-column-gap: 10px;
+        margin-bottom: 10px;
+        margin-left: 20px; 
+    }
+   
 }
